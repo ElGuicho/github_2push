@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:11 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/30 18:59:04 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/05/30 19:29:00 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	push_to_b(swap_list *nums, char *n, int i, int j, int k)
 	}
 	if (n[i] - k == -1)
 	{
-		//i need to identify the highest number in stack b count the steps to the top
+		//i need to identify the highest number in stack b count the steps to the top lol
 	}
 }
 
