@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/23 17:35:18 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/05/30 18:16:00 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef  struct push_list
 	int	rr;
 	int	rrr;
 	int	n_steps;
+	int	pb_steps;
+	int	num_to_move;
 	int rot_b;
 }	swap_list;
 
