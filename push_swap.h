@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/30 18:16:00 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/05/31 18:00:38 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,19 @@ typedef  struct push_list
 	int	n_args;
 	int	b_n_args;
 	int	ss;
+	int	ra;
 	int	rr;
 	int	rrr;
 	int	n_steps;
 	int	pb_steps;
 	int	num_to_move;
+	int	steps_ra;
+	int	steps_rb;
+	int	steps_rr;
+	int	steps_rra;
+	int	steps_rrb;
+	int	steps_rrr;
+	int	steps_after_r;
 	int rot_b;
 }	swap_list;
 
@@ -68,5 +76,16 @@ void	num_position(swap_list *nums);
 void	last_nbs(swap_list *nums, int less_than_5);
 void	correct_pos(swap_list *nums, int i);
 void	placed_column_a(swap_list *nums, int n, int i, int j);
+
+// steps_optimization
+void	rarb_steps(swap_list *nums, int i);
+void	rarrb_steps(swap_list *nums, int i);
+void	rrarrb_steps(swap_list *nums, int i);
+void	rrarb_steps(swap_list *nums, int i);
+
+// step_initialization
+void	ifrr(swap_list *nums, int i);
+void	ifrrr(swap_list *nums, int i);
+void	mixed_rs(swap_list *nums, int i);
 
 #endif
