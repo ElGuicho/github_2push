@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:11 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/05 18:25:15 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/05 18:56:34 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,10 @@ void	push_to_b(swap_list *nums, int *n, int i, int j, int k)
 			while (nums->column_b[k] > nums->column_b[k + 1] && k < nums->b_n_args - 1)
 				k++;
 			nums->steps_rb = k + 1;
-			nums->steps_rrb = nums->b_n_args - k + 1;
+			nums->steps_rrb = nums->b_n_args - k - 1;
 			nums->possible_b = k + 1;
+			if (nums->b_n_args == 64)
+				ft_printf("steps_rb = %d\n", nums->steps_rb);
 		}
 	}
 	else
@@ -129,8 +131,6 @@ void	push_to_b(swap_list *nums, int *n, int i, int j, int k)
 		nums->steps_rb = j;
 		nums->steps_rrb = nums->b_n_args - j;
 	}
-	if (nums->b_n_args == 64)
-		ft_printf("steps_rb = %d\n", nums->steps_rb);
 	rarb_steps(nums, i);
 	rrarrb_steps(nums, i);
 	rarrb_steps(nums, i);
