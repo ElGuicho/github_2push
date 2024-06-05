@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/04 16:30:18 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/05 16:21:14 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ typedef  struct push_list
 	int	n_steps;
 	int	pb_steps;
 	int	num_to_move;
+	int	possible_b;
+	int b_to_move;
 	int	steps_ra;
 	int	steps_rb;
 	int	steps_rr;
@@ -76,6 +78,7 @@ void	sort_nums(swap_list *nums, int *column_b);
 void	num_position(swap_list *nums);
 void	last_nbs(swap_list *nums, int less_than_5);
 void	correct_pos(swap_list *nums, int i);
+void	correct_pos_b(swap_list *nums, int i);
 void	placed_column_a(swap_list *nums, int n, int i, int j);
 
 // steps_optimization

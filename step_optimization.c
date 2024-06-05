@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 16:42:36 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/04 19:02:38 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/05 17:20:14 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void rrarb_steps(swap_list *nums, int i)
 	r_steps = nums->steps_rra + nums->steps_rb;
 	if (r_steps < nums->r_steps)
 	{
+		nums->b_to_move = nums->possible_b;
 		nums->r_steps = r_steps;
 		nums->num_to_move = i;
 		nums->steps_rr = 0;
 		nums->steps_rrr = 0;
 	}
-	ft_printf("rrarb_steps = %d\n", nums->r_steps);
+	//ft_printf("rrarb_steps = %d\n", nums->r_steps);
 }
 
 void rarrb_steps(swap_list *nums, int i)
@@ -34,17 +35,18 @@ void rarrb_steps(swap_list *nums, int i)
 	r_steps = nums->steps_ra + nums->steps_rrb;
 	if (r_steps < nums->r_steps)
 	{
+		nums->b_to_move = nums->possible_b;
 		nums->r_steps = r_steps;
 		nums->num_to_move = i;
 		nums->steps_rr = 0;
 		nums->steps_rrr = 0;
 	}
-	ft_printf("rarrb_steps = %d\n", nums->r_steps);
+	//ft_printf("rarrb_steps = %d\n", nums->r_steps);
 }
 
 void rrarrb_steps(swap_list *nums, int i)
 {
-	ft_printf("column_a[%d] = %d\n", i, nums->column_a[i]);
+	//ft_printf("column_a[%d] = %d\n", i, nums->column_a[i]);
 	int steps_rrr;
 	int r_steps;
 	
@@ -60,12 +62,13 @@ void rrarrb_steps(swap_list *nums, int i)
 	}
 	if (r_steps < nums->r_steps)
 	{
+		nums->b_to_move = nums->possible_b;
 		nums->r_steps = r_steps;
 		nums->num_to_move = i;
 		nums->steps_rrr = steps_rrr;
 		nums->steps_rr = 0;
 	}
-	ft_printf("rrarrb_steps = %d\n", nums->r_steps);
+	//ft_printf("rrarrb_steps = %d\n", nums->r_steps);
 }
 
 void rarb_steps(swap_list *nums, int i)
@@ -87,10 +90,11 @@ void rarb_steps(swap_list *nums, int i)
 	}
 	if (r_steps < nums->r_steps)
 	{
+		nums->b_to_move = nums->possible_b;
 		nums->r_steps = r_steps;
 		nums->num_to_move = i;
 		nums->steps_rr = steps_rr;
 		nums->steps_rrr = 0;
 	}
-	ft_printf("rarb_steps = %d\n", nums->r_steps);
+	//ft_printf("rarb_steps = %d\n", nums->r_steps);
 }
