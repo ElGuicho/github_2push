@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:50:02 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/22 14:46:56 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 15:22:48 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ void	pb(swap_list *nums)
 	write (1, "pb\n", 3);
 	nums->n_steps++;
 }
-//4 8 9 6
-	/* printf("nums[0] = %d\n", nums->column_a[0]);
-	printf("nums[1] = %d\n", nums->column_a[1]);
-	printf("nums[2] = %d\n", nums->column_a[2]);
-	printf("nums[3] = %d\n", nums->column_a[3]); */

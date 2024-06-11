@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:23 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 14:23:50 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 15:23:50 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,3 @@ void	move500(swap_list *nums, int i)
 	while (nums->column_a[0] != 0)
 		rra(nums);
 }
-
-/* en vez de ordenar los numeros en b y luego pasarlos a a, irlos ordenando mientras
-los paso a a. */

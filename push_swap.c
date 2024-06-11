@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:59:39 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/04 14:00:50 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 17:24:35 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,28 @@ void	argtoint(swap_list *nums, int argc, char **argv, int i)
 	}
 }
 
+int	same_num(swap_list *nums)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < nums->n_args)
+	{
+		if (i == -2147483648)
+			return (-1);
+		j = i + 1;
+		while (j < nums->n_args)
+		{
+			if (nums->column_a[i] == nums->column_a[j])
+				return (-1);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
 int in_order(swap_list *nums, int *n)
 {
 	int	i;
@@ -170,6 +192,8 @@ int	push_swap(int argc, char **argv)
 	nums->b_n_args = 0;
 	nums->rot_b = 0;
 	argtoint(nums, argc, argv, i);
+	if (same_num(nums) == -1)
+		return (-1);
 	if (in_order(nums, nums->column_a) == 1)
 		return (1);
 	if (n_args <= 3)

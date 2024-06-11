@@ -6,7 +6,7 @@
 #    By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 16:45:44 by gmunoz            #+#    #+#              #
-#    Updated: 2024/05/31 17:29:34 by gmunoz           ###   ########.fr        #
+#    Updated: 2024/06/11 15:24:47 by gmunoz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Source files
 SRCS = push_swap.c sa.c ra.c rra.c pa.c pb.c 3numbers.c 5numbers.c \
-100numbers.c 100num_functions.c 500numbers.c step_optimization.c \
+100numbers.c extra_functions.c 500numbers.c step_optimization.c \
 step_initialization.c
 
 # Object files
