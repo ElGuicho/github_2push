@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 17:19:09 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/05 17:19:24 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 14:20:18 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	ifrr(swap_list *nums, int i)
 
 void	ifrrr(swap_list *nums, int i)
 {
-	//ft_printf("i = %d\n", i);
 	i = i - (nums->n_args - nums->steps_rrr);
 	if (i == 0)
 	{

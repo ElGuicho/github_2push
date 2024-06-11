@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/05 16:21:14 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 14:24:35 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ void	move3(swap_list *nums, int *n);
 void	move5(swap_list *nums, int *n);
 void	move100(swap_list *nums, int i);
 void	move500(swap_list *nums, int i);
-void	hundred_move3(swap_list *nums, int *n, int i);
-void	hundred_move5(swap_list *nums, int *n, int i);
 
 int in_order(swap_list *nums, int *n);
 
@@ -80,6 +78,7 @@ void	last_nbs(swap_list *nums, int less_than_5);
 void	correct_pos(swap_list *nums, int i);
 void	correct_pos_b(swap_list *nums, int i);
 void	placed_column_a(swap_list *nums, int n, int i, int j);
+void	push_to_b(swap_list *nums, int *n, int i, int j, int k);
 
 // steps_optimization
 void	rarb_steps(swap_list *nums, int i);

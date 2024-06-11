@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:44:31 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/04 17:13:44 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/11 14:18:06 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@ void	num_position(swap_list *nums)
 	int	j;
 
 	i = 0;
-/* 	j = nums->n_args;
-	while (j > 0)
-	{
-		ft_printf("column a[%d] = %d\n", i, nums->column_a[i]);
-		i++;
-		j--;
-	} */
 	j = 0;
 	while (j < nums->n_args)
 	{
@@ -34,14 +27,6 @@ void	num_position(swap_list *nums)
 		nums->column_a[j] = i;
 		j++;
 	}
-	/* i = 0;
-	j = nums->n_args;
-	while (j > 0)
-	{
-		ft_printf("column a 0 to 99[%d] = %d\n", i, nums->column_a[i]);
-		i++;
-		j--;
-	} */
 }
 
 void	swap(swap_list *nums, int j)
