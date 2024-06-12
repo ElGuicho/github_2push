@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:59:39 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 14:28:12 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/12 16:23:23 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	lst_allocating(swap_list *nums, char **argv, int argc)
 		return (free(nums), -1);
 	nums->n_args = n_args;
 	nums->b_n_args = 0;
-	nums->rot_b = 0;
 	argtoint(nums, argc, argv, i);
 	return (n_args);
 }

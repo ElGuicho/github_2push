@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 14:29:38 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/12 16:34:22 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,10 @@ typedef  struct push_list
 	int	n_args;
 	int	b_n_args;
 	int	ss;
-	int	ra;
 	int	rr;
 	int	rrr;
 	int	r_steps;
 	int	n_steps;
-	int	pb_steps;
 	int	num_to_move;
 	int	possible_b;
 	int b_to_move;
@@ -44,8 +42,6 @@ typedef  struct push_list
 	int	steps_rra;
 	int	steps_rrb;
 	int	steps_rrr;
-	int	steps_after_r;
-	int rot_b;
 }	swap_list;
 
 int	push_swap(int argc, char **argv);
@@ -66,6 +62,7 @@ void	pb(swap_list *nums);
 //num_check
 int		arg_count(int argc, char **argv, int i);
 void	argtoint(swap_list *nums, int argc, char **argv, int i);
+int		in_order(swap_list *nums, int *n);
 
 // arranging numbers
 void	move3(swap_list *nums, int *n);
@@ -73,16 +70,12 @@ void	move5(swap_list *nums, int *n);
 void	move100(swap_list *nums, int i);
 void	move500(swap_list *nums, int i);
 
-int in_order(swap_list *nums, int *n);
 
 // 100num_functions
 void	sort_nums(swap_list *nums, int *column_b);
 void	num_position(swap_list *nums);
-void	last_nbs(swap_list *nums, int less_than_5);
-void	correct_pos(swap_list *nums, int i);
-void	correct_pos_b(swap_list *nums, int i);
-void	placed_column_a(swap_list *nums, int n, int i, int j);
-void	push_to_b(swap_list *nums, int *n, int i, int j, int k);
+void	move_pa(swap_list *nums, int max_args);
+void	move_pb(swap_list *nums, int i);
 
 // steps_optimization
 void	rarb_steps(swap_list *nums, int i);

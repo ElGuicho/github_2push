@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 17:19:09 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 15:21:29 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/12 16:22:21 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,50 @@ void	ifrrr(swap_list *nums, int i)
 		rrr(nums);
 		nums->steps_rrr--;
 	}	
+}
+
+void	correct_pos_b(swap_list *nums, int i)
+{
+	if (nums->b_n_args - i < i)
+	{
+		while (i < nums->b_n_args)
+		{
+			rrb(nums);
+			nums->r_steps--;
+			i++;
+		}
+	}
+	else
+	{
+		while (i > 0)
+		{
+			rb(nums);
+			nums->r_steps--;
+			i--;
+		}
+	}
+}
+
+void	correct_pos(swap_list *nums, int i)
+{
+	if (nums->n_args - i < i)
+	{
+		while (i < nums->n_args)
+		{
+			rra(nums);
+			nums->r_steps--;
+			i++;
+		}
+	}
+	else
+	{
+		while (i > 0)
+		{
+			ra(nums);
+			nums->r_steps--;
+			i--;
+		}
+	}
 }
 
 void	mixed_rs(swap_list *nums, int i)
