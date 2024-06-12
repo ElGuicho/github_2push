@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 14:24:35 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/12 14:29:38 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ void	rrb(swap_list *nums);
 void	rrr(swap_list *nums);
 void	pa(swap_list *nums);
 void	pb(swap_list *nums);
+
+//num_check
+int		arg_count(int argc, char **argv, int i);
+void	argtoint(swap_list *nums, int argc, char **argv, int i);
 
 // arranging numbers
 void	move3(swap_list *nums, int *n);
