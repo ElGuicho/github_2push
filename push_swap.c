@@ -6,11 +6,23 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:59:39 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 16:23:23 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/12 17:29:01 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	freee(swap_list *nums)
+{
+	if (nums->column_a)
+		free(nums->column_a);
+	if (nums->column_b)
+		free(nums->column_b);
+	if (nums->ordered_column)
+		free(nums->ordered_column);
+	if (nums)
+		free(nums);
+}
 
 int	lst_allocating(swap_list *nums, char **argv, int argc)
 {
@@ -21,16 +33,16 @@ int	lst_allocating(swap_list *nums, char **argv, int argc)
 	nums->n_steps = 0;
 	n_args = arg_count(argc, argv, i);
 	if (n_args == -1)
-		return (free(nums), -1);
+		return (freee(nums), -1);
 	nums->column_a = malloc(sizeof(int) * n_args);
 	if (nums->column_a == NULL)
-		return (free(nums), -1);
+		return (freee(nums), -1);
 	nums->column_b = malloc(sizeof(int) * n_args);
 	if (nums->column_b == NULL)
-		return (free(nums), -1);
+		return (freee(nums), -1);
 	nums->ordered_column = malloc(sizeof(int) * n_args);
 	if (nums->ordered_column == NULL)
-		return (free(nums), -1);
+		return (freee(nums), -1);
 	nums->n_args = n_args;
 	nums->b_n_args = 0;
 	argtoint(nums, argc, argv, i);
@@ -101,5 +113,6 @@ int	push_swap(int argc, char **argv)
 		n_args--;
 	}
 	ft_printf("n_steps = %d\n", nums->n_steps); */
+	freee(nums);
 	return (1);
 }
