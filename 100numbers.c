@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:11 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 16:36:36 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 14:33:46 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	biggest_nb(swap_list *nums, int j, int k, int max_args)
 {
-	if (k == max_args)
+	if (nums->column_b[0] + k == max_args)
 		{
+			ft_printf("enters biggest_nb\n");
 			k = 0;
 			if (nums->column_b[nums->n_args - 1] > nums->column_a[0])
 			{
@@ -63,9 +64,25 @@ void	move_pa(swap_list *nums, int max_args)
 	
 	while (nums->b_n_args > 0)
 	{
+		if (nums->n_args < 7)
+		{
+			j = 0;
+			k = 0;
+			while (j < nums->n_args)
+			{
+				ft_printf("column_a[%d] = %d\n", j, nums->column_a[j]);
+				j++;
+			}
+			ft_printf("\n");
+			while (k < nums->b_n_args)
+			{
+				ft_printf("column_b[%d] = %d\n", k, nums->column_b[k]);
+				k++;
+			}
+		}
 		j = 0;
 		k = 1;
-		while (nums->column_a[j] != nums->column_b[0] + k && k != max_args - nums->column_b[0] + 1)
+		while (nums->column_a[j] != nums->column_b[0] + k && nums->column_b[0] + k != max_args)
 		{
 			j++;
 			if (j == nums->n_args)
@@ -74,7 +91,10 @@ void	move_pa(swap_list *nums, int max_args)
 				j = 0;
 			}
 		}
+		ft_printf("column_b[0] + k = %d\n", nums->column_b[0] + k);
 		biggest_nb(nums, j, k, max_args);
+		ft_printf("steps_rb = %d\n", nums->steps_rb);
+		ft_printf("steps_rrb = %d\n", nums->steps_rrb);
 		rb_or_rrb(nums);
 		pa(nums);
 	}

@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:25:01 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 14:25:16 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 13:59:54 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int	arg_count(int argc, char **argv, int i)
 		}
 		i++;
 	}
-	//printf ("total args: %d\n", n_args);
 	return (n_args);
 }
 
