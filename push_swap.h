@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:02:59 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:52:34 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdarg.h>
 # include <limits.h>
 
-typedef  struct push_list
+typedef struct push_list
 {
 	int	*column_a;
 	int	*column_b;
@@ -35,7 +35,7 @@ typedef  struct push_list
 	int	n_steps;
 	int	num_to_move;
 	int	possible_b;
-	int b_to_move;
+	int	b_to_move;
 	int	steps_ra;
 	int	steps_rb;
 	int	steps_rr;
@@ -43,51 +43,50 @@ typedef  struct push_list
 	int	steps_rrb;
 	int	steps_rrr;
 	int	limit_error;
-}	swap_list;
+}	t_swap_list;
 
-int	push_swap(int argc, char **argv);
+int			push_swap(int argc, char **argv);
 
 // steps
-void	sa(swap_list *nums);
-void	sb(swap_list *nums);
-void	ss(swap_list *nums);
-void	ra(swap_list *nums);
-void	rb(swap_list *nums);
-void	rr(swap_list *nums);
-void	rra(swap_list *nums);
-void	rrb(swap_list *nums);
-void	rrr(swap_list *nums);
-void	pa(swap_list *nums);
-void	pb(swap_list *nums);
+void		sa(t_swap_list *nums);
+void		sb(t_swap_list *nums);
+void		ss(t_swap_list *nums);
+void		ra(t_swap_list *nums);
+void		rb(t_swap_list *nums);
+void		rr(t_swap_list *nums);
+void		rra(t_swap_list *nums);
+void		rrb(t_swap_list *nums);
+void		rrr(t_swap_list *nums);
+void		pa(t_swap_list *nums);
+void		pb(t_swap_list *nums);
 
 //num_check
 int			arg_count(int argc, char **argv, int i);
-void		argtoint(swap_list *nums, int argc, char **argv, int i);
-int			in_order(swap_list *nums, int *n);
+void		argtoint(t_swap_list *nums, int argc, char **argv, int i);
+int			in_order(t_swap_list *nums, int *n);
 long int	ft_atol(const char *str);
 
 // arranging numbers
-void	move3(swap_list *nums, int *n);
-void	move5(swap_list *nums, int *n);
-void	move100(swap_list *nums, int i);
-void	move500(swap_list *nums, int i);
-
+void		move3(t_swap_list *nums, int *n);
+void		move5(t_swap_list *nums, int *n);
+void		move100(t_swap_list *nums, int i);
+void		move500(t_swap_list *nums, int i);
 
 // 100+_num_functions
-void	sort_nums(swap_list *nums, int *column_b);
-void	num_position(swap_list *nums);
-void	move_pa(swap_list *nums, int max_args);
-void	move_pb(swap_list *nums, int i);
+void		sort_nums(t_swap_list *nums, int *column_b);
+void		num_position(t_swap_list *nums);
+void		move_pa(t_swap_list *nums, int max_args);
+void		move_pb(t_swap_list *nums, int i);
 
 // steps_optimization
-void	rarb_steps(swap_list *nums, int i);
-void	rarrb_steps(swap_list *nums, int i);
-void	rrarrb_steps(swap_list *nums, int i);
-void	rrarb_steps(swap_list *nums, int i);
+void		rarb_steps(t_swap_list *nums, int i);
+void		rarrb_steps(t_swap_list *nums, int i);
+void		rrarrb_steps(t_swap_list *nums, int i);
+void		rrarb_steps(t_swap_list *nums, int i);
 
 // step_initialization
-void	ifrr(swap_list *nums, int i);
-void	ifrrr(swap_list *nums, int i);
-void	mixed_rs(swap_list *nums, int i);
+void		ifrr(t_swap_list *nums, int i);
+void		ifrrr(t_swap_list *nums, int i);
+void		mixed_rs(t_swap_list *nums, int i);
 
 #endif

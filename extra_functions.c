@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:44:31 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:01:48 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:48:29 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long int	ft_atol(const char *str)
 {
-	int	i;
+	int		i;
 	long	sol;
 	long	equ;
 
@@ -39,7 +39,7 @@ long int	ft_atol(const char *str)
 	return (sol);
 }
 
-void	num_position(swap_list *nums)
+void	num_position(t_swap_list *nums)
 {
 	int	i;
 	int	j;
@@ -56,16 +56,16 @@ void	num_position(swap_list *nums)
 	}
 }
 
-void	swap(swap_list *nums, int j)
+void	swap(t_swap_list *nums, int j)
 {
 	int	temp;
-	
+
 	temp = nums->ordered_column[j];
 	nums->ordered_column[j] = nums->ordered_column[j + 1];
 	nums->ordered_column[j + 1] = temp;
 }
 
-void	sort_nums(swap_list *nums, int *column_a)
+void	sort_nums(t_swap_list *nums, int *column_a)
 {
 	int	i;
 	int	j;

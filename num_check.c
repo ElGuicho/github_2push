@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:25:01 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:15:13 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:48:55 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	digits_in_nb(char *arg_w_spc, int i, int arg_len)
 	int	j;
 
 	j = 0;
-	while (arg_w_spc[i] != ' ' && i < arg_len)	
+	while (arg_w_spc[i] != ' ' && i < arg_len)
 	{
 		i++;
 		j++;
@@ -78,16 +78,15 @@ int	digits_in_nb(char *arg_w_spc, int i, int arg_len)
 	return (j);
 }
 
-int	arg_space(swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
+int	arg_space(t_swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 {
-	int arg_len;
+	int		arg_len;
 	char	*start_nb;
 
 	arg_len = ft_strlen(arg_w_spc);
 	if (ft_atol(arg_w_spc) < INT_MIN || ft_atol(arg_w_spc) > INT_MAX)
 		nums->limit_error = -1;
 	nums->column_a[nargs_in_lst] = ft_atoi(arg_w_spc);
-	
 	nargs_in_lst++;
 	i = i + digits_in_nb(arg_w_spc, i, arg_len);
 	while (i < arg_len)
@@ -104,7 +103,7 @@ int	arg_space(swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 	return (nargs_in_lst);
 }
 
-void	argtoint(swap_list *nums, int argc, char **argv, int i)
+void	argtoint(t_swap_list *nums, int argc, char **argv, int i)
 {
 	int	j;
 	int	nargs_in_lst;

@@ -6,17 +6,17 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:24:30 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/04 14:29:16 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:52:52 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(swap_list *nums)
+void	ra(t_swap_list *nums)
 {
 	int	i;
 	int	temp;
-	
+
 	i = 0;
 	temp = nums->column_a[0];
 	while (i < nums->n_args - 1)
@@ -30,11 +30,11 @@ void	ra(swap_list *nums)
 	nums->n_steps++;
 }
 
-void	rb(swap_list *nums)
+void	rb(t_swap_list *nums)
 {
 	int	i;
 	int	temp;
-	
+
 	i = 0;
 	temp = nums->column_b[0];
 	while (i < nums->b_n_args - 1)
@@ -49,7 +49,7 @@ void	rb(swap_list *nums)
 	nums->n_steps++;
 }
 
-void	rr(swap_list *nums)
+void	rr(t_swap_list *nums)
 {
 	nums->rr = 1;
 	write (1, "rr\n", 3);

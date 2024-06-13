@@ -6,13 +6,13 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:50:02 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 15:22:48 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:49:06 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pb(swap_list *nums)
+void	pb(t_swap_list *nums)
 {
 	int	i;
 

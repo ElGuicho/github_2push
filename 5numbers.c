@@ -6,13 +6,13 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:04 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/16 18:38:24 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:48:11 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	four_args(swap_list *nums, int *n)
+void	four_args(t_swap_list *nums, int *n)
 {
 	if (n[0] > n[1] && n[1] < n[2] && n[1] < n[3])
 		ra(nums);
@@ -30,7 +30,7 @@ void	four_args(swap_list *nums, int *n)
 	pa(nums);
 }
 
-void	move5(swap_list *nums, int *n)
+void	move5(t_swap_list *nums, int *n)
 {
 	if (nums->n_args == 4)
 	{

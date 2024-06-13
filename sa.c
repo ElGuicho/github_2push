@@ -6,16 +6,16 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:03:04 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/05/22 14:39:21 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:53:11 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(swap_list *nums)
+void	sa(t_swap_list *nums)
 {
 	int	temp;
-	
+
 	temp = nums->column_a[0];
 	nums->column_a[0] = nums->column_a[1];
 	nums->column_a[1] = temp;
@@ -24,10 +24,10 @@ void	sa(swap_list *nums)
 	nums->n_steps++;
 }
 
-void	sb(swap_list *nums)
+void	sb(t_swap_list *nums)
 {
 	int	temp;
-	
+
 	temp = nums->column_b[0];
 	nums->column_b[0] = nums->column_b[1];
 	nums->column_b[1] = temp;
@@ -37,7 +37,7 @@ void	sb(swap_list *nums)
 	nums->n_steps++;
 }
 
-void	ss(swap_list *nums)
+void	ss(t_swap_list *nums)
 {
 	nums->ss = 1;
 	write (1, "ss\n", 3);

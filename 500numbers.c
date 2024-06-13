@@ -6,13 +6,13 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:13:23 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 16:36:26 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:48:02 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	smallest_nb(swap_list *nums, int *n, int i, int j, int k)
+void	smallest_nb(t_swap_list *nums, int *n, int i, int k)
 {
 	if (n[i] - k == -1)
 	{
@@ -25,7 +25,8 @@ void	smallest_nb(swap_list *nums, int *n, int i, int j, int k)
 		}
 		else
 		{
-			while (nums->column_b[k] > nums->column_b[k + 1] && k < nums->b_n_args - 1)
+			while (nums->column_b[k] > nums->column_b[k + 1]
+				&& k < nums->b_n_args - 1)
 				k++;
 			nums->steps_rb = k + 1;
 			nums->steps_rrb = nums->b_n_args - k - 1;
@@ -34,13 +35,16 @@ void	smallest_nb(swap_list *nums, int *n, int i, int j, int k)
 	}
 	else
 	{
-		nums->steps_rb = j;
-		nums->steps_rrb = nums->b_n_args - j;
+		nums->steps_rb = nums->possible_b;
+		nums->steps_rrb = nums->b_n_args - nums->possible_b;
 	}
 }
 
-void	push_to_b(swap_list *nums, int *n, int i, int j, int k)
+void	push_to_b(t_swap_list *nums, int *n, int i, int j)
 {
+	int	k;
+
+	k = 1;
 	nums->steps_ra = i;
 	nums->steps_rra = nums->n_args - i;
 	while (nums->column_b[j] != n[i] - k && n[i] - k != -1)
@@ -53,14 +57,14 @@ void	push_to_b(swap_list *nums, int *n, int i, int j, int k)
 		}
 	}
 	nums->possible_b = j;
-	smallest_nb(nums, n, i, j, k);
+	smallest_nb(nums, n, i, k);
 	rarb_steps(nums, i);
 	rrarrb_steps(nums, i);
 	rarrb_steps(nums, i);
 	rrarb_steps(nums, i);
 }
 
-void move_pb(swap_list *nums, int i)
+void	move_pb(t_swap_list *nums, int i)
 {
 	pb(nums);
 	pb(nums);
@@ -70,7 +74,7 @@ void move_pb(swap_list *nums, int i)
 		i = 0;
 		while (i < nums->n_args)
 		{
-			push_to_b(nums, nums->column_a, i, 0, 1);
+			push_to_b(nums, nums->column_a, i, 0);
 			i++;
 		}
 		if (nums->steps_rr != 0)
@@ -83,9 +87,9 @@ void move_pb(swap_list *nums, int i)
 	}
 }
 
-void	move500(swap_list *nums, int i)
+void	move500(t_swap_list *nums, int i)
 {
-	int max_args;
+	int	max_args;
 
 	max_args = nums->n_args;
 	nums->steps_rr = 0;

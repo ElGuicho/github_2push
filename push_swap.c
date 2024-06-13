@@ -6,13 +6,13 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:59:39 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:05:06 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:49:48 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	freee(swap_list *nums)
+void	freee(t_swap_list *nums)
 {
 	if (nums->column_a)
 		free(nums->column_a);
@@ -24,10 +24,10 @@ void	freee(swap_list *nums)
 		free(nums);
 }
 
-int	lst_allocating(swap_list *nums, char **argv, int argc)
+int	lst_allocating(t_swap_list *nums, char **argv, int argc)
 {
 	int	i;
-	int n_args;
+	int	n_args;
 
 	i = 1;
 	nums->n_steps = 0;
@@ -52,7 +52,7 @@ int	lst_allocating(swap_list *nums, char **argv, int argc)
 	return (n_args);
 }
 
-int	same_num(swap_list *nums)
+int	same_num(t_swap_list *nums)
 {
 	int	i;
 	int	j;
@@ -60,8 +60,6 @@ int	same_num(swap_list *nums)
 	i = 0;
 	while (i < nums->n_args)
 	{
-		if (i == -2147483648)
-			return (-1);
 		j = i + 1;
 		while (j < nums->n_args)
 		{
@@ -74,7 +72,7 @@ int	same_num(swap_list *nums)
 	return (1);
 }
 
-int in_order(swap_list *nums, int *n)
+int	in_order(t_swap_list *nums, int *n)
 {
 	int	i;
 
@@ -88,10 +86,10 @@ int in_order(swap_list *nums, int *n)
 
 int	push_swap(int argc, char **argv)
 {
-	swap_list	*nums;
+	t_swap_list	*nums;
 	int			n_args;
 
-	nums = malloc(sizeof(swap_list));
+	nums = malloc(sizeof(t_swap_list));
 	if (!nums)
 		return (-1);
 	n_args = lst_allocating(nums, argv, argc);
@@ -107,15 +105,6 @@ int	push_swap(int argc, char **argv)
 		move100(nums, 0);
 	else if (n_args <= 500 && n_args > 100)
 		move500(nums, 0);
-	/* int i = 0;
-	n_args = nums->n_args;
-	while (n_args > 0)
-	{
-		ft_printf("final list[%d] = %d\n", i, nums->column_a[i]);
-		i++;
-		n_args--;
-	}
-	ft_printf("n_steps = %d\n", nums->n_steps); */
 	freee(nums);
 	return (1);
 }

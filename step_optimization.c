@@ -6,15 +6,15 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 16:42:36 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 15:19:38 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:54:44 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void rrarb_steps(swap_list *nums, int i)
+void	rrarb_steps(t_swap_list *nums, int i)
 {
-	int r_steps;
+	int	r_steps;
 
 	r_steps = nums->steps_rra + nums->steps_rb;
 	if (r_steps < nums->r_steps)
@@ -27,9 +27,9 @@ void rrarb_steps(swap_list *nums, int i)
 	}
 }
 
-void rarrb_steps(swap_list *nums, int i)
+void	rarrb_steps(t_swap_list *nums, int i)
 {
-	int r_steps;
+	int	r_steps;
 
 	r_steps = nums->steps_ra + nums->steps_rrb;
 	if (r_steps < nums->r_steps)
@@ -42,11 +42,11 @@ void rarrb_steps(swap_list *nums, int i)
 	}
 }
 
-void rrarrb_steps(swap_list *nums, int i)
+void	rrarrb_steps(t_swap_list *nums, int i)
 {
-	int steps_rrr;
-	int r_steps;
-	
+	int	steps_rrr;
+	int	r_steps;
+
 	if (nums->steps_rra < nums->steps_rrb)
 	{
 		steps_rrr = nums->steps_rra;
@@ -67,10 +67,10 @@ void rrarrb_steps(swap_list *nums, int i)
 	}
 }
 
-void rarb_steps(swap_list *nums, int i)
+void	rarb_steps(t_swap_list *nums, int i)
 {
-	int steps_rr;
-	int r_steps;
+	int	steps_rr;
+	int	r_steps;
 
 	if (nums->steps_ra < nums->steps_rb)
 	{
