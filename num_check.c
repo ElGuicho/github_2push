@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:25:01 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 13:59:54 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:15:13 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ int	arg_space(swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 	char	*start_nb;
 
 	arg_len = ft_strlen(arg_w_spc);
+	if (ft_atol(arg_w_spc) < INT_MIN || ft_atol(arg_w_spc) > INT_MAX)
+		nums->limit_error = -1;
 	nums->column_a[nargs_in_lst] = ft_atoi(arg_w_spc);
 	
 	nargs_in_lst++;
@@ -91,10 +93,10 @@ int	arg_space(swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 	while (i < arg_len)
 	{
 		while (arg_w_spc[i - 1] != ' ' && arg_w_spc[i] != '\0')
-		{
 			i++;
-		}
 		start_nb = arg_w_spc + i;
+		if (ft_atol(start_nb) < INT_MIN || ft_atol(start_nb) > INT_MAX)
+			nums->limit_error = -1;
 		nums->column_a[nargs_in_lst] = ft_atoi(start_nb);
 		i = i + digits_in_nb(arg_w_spc, i, arg_len);
 		nargs_in_lst++;
@@ -124,7 +126,11 @@ void	argtoint(swap_list *nums, int argc, char **argv, int i)
 			j++;
 		}
 		if (has_space == 0)
+		{
+			if (ft_atol(argv[i]) < INT_MIN || ft_atol(argv[i]) > INT_MAX)
+				nums->limit_error = -1;
 			nums->column_a[nargs_in_lst] = ft_atoi(argv[i]);
+		}
 		nargs_in_lst++;
 		i++;
 	}

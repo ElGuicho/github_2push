@@ -1,16 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   100num_functions.c                                 :+:      :+:    :+:   */
+/*   extra_functions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:44:31 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/11 15:24:09 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:01:48 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+long int	ft_atol(const char *str)
+{
+	int	i;
+	long	sol;
+	long	equ;
+
+	i = 0;
+	sol = 1;
+	equ = 0;
+	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+	{
+		sol = -sol;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		equ = (equ * 10) + (str[i] - 48);
+		i++;
+	}
+	sol = sol * equ;
+	return (sol);
+}
 
 void	num_position(swap_list *nums)
 {

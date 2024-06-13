@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/12 16:34:22 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/13 18:02:59 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef  struct push_list
 	int	steps_rra;
 	int	steps_rrb;
 	int	steps_rrr;
+	int	limit_error;
 }	swap_list;
 
 int	push_swap(int argc, char **argv);
@@ -60,9 +61,10 @@ void	pa(swap_list *nums);
 void	pb(swap_list *nums);
 
 //num_check
-int		arg_count(int argc, char **argv, int i);
-void	argtoint(swap_list *nums, int argc, char **argv, int i);
-int		in_order(swap_list *nums, int *n);
+int			arg_count(int argc, char **argv, int i);
+void		argtoint(swap_list *nums, int argc, char **argv, int i);
+int			in_order(swap_list *nums, int *n);
+long int	ft_atol(const char *str);
 
 // arranging numbers
 void	move3(swap_list *nums, int *n);
@@ -71,7 +73,7 @@ void	move100(swap_list *nums, int i);
 void	move500(swap_list *nums, int i);
 
 
-// 100num_functions
+// 100+_num_functions
 void	sort_nums(swap_list *nums, int *column_b);
 void	num_position(swap_list *nums);
 void	move_pa(swap_list *nums, int max_args);
