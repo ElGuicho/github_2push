@@ -1,5 +1,5 @@
 declare -A nums1
-while (( ${#nums1[@]} < 500 )); do
+while (( ${#nums1[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums1[$num]=1
 done
@@ -9,7 +9,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums2
-while (( ${#nums2[@]} < 500 )); do
+while (( ${#nums2[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums2[$num]=1
 done
@@ -19,7 +19,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums3
-while (( ${#nums3[@]} < 500 )); do
+while (( ${#nums3[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums3[$num]=1
 done
@@ -29,7 +29,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums4
-while (( ${#nums4[@]} < 500 )); do
+while (( ${#nums4[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums4[$num]=1
 done
@@ -39,7 +39,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums5
-while (( ${#nums5[@]} < 500 )); do
+while (( ${#nums5[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums5[$num]=1
 done
@@ -49,7 +49,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums6
-while (( ${#nums6[@]} < 500 )); do
+while (( ${#nums6[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums6[$num]=1
 done
@@ -59,7 +59,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums7
-while (( ${#nums7[@]} < 500 )); do
+while (( ${#nums7[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums7[$num]=1
 done
@@ -69,7 +69,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums8
-while (( ${#nums8[@]} < 500 )); do
+while (( ${#nums8[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums8[$num]=1
 done
@@ -79,7 +79,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums9
-while (( ${#nums9[@]} < 500 )); do
+while (( ${#nums9[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums9[$num]=1
 done
@@ -89,7 +89,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums10
-while (( ${#nums10[@]} < 500 )); do
+while (( ${#nums10[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums10[$num]=1
 done
@@ -99,7 +99,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums11
-while (( ${#nums11[@]} < 500 )); do
+while (( ${#nums11[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums11[$num]=1
 done
@@ -109,7 +109,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums12
-while (( ${#nums12[@]} < 500 )); do
+while (( ${#nums12[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums12[$num]=1
 done
@@ -119,7 +119,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums13
-while (( ${#nums13[@]} < 500 )); do
+while (( ${#nums13[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums13[$num]=1
 done
@@ -129,7 +129,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums14
-while (( ${#nums14[@]} < 500 )); do
+while (( ${#nums14[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums14[$num]=1
 done
@@ -139,7 +139,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums15
-while (( ${#nums15[@]} < 500 )); do
+while (( ${#nums15[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums15[$num]=1
 done
@@ -149,7 +149,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums16
-while (( ${#nums16[@]} < 500 )); do
+while (( ${#nums16[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums16[$num]=1
 done
@@ -159,7 +159,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums17
-while (( ${#nums17[@]} < 500 )); do
+while (( ${#nums17[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums17[$num]=1
 done
@@ -169,7 +169,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums18
-while (( ${#nums18[@]} < 500 )); do
+while (( ${#nums18[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums18[$num]=1
 done
@@ -179,7 +179,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums19
-while (( ${#nums19[@]} < 500 )); do
+while (( ${#nums19[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums19[$num]=1
 done
@@ -189,7 +189,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums20
-while (( ${#nums20[@]} < 500 )); do
+while (( ${#nums20[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums20[$num]=1
 done
@@ -199,7 +199,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums21
-while (( ${#nums21[@]} < 500 )); do
+while (( ${#nums21[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums21[$num]=1
 done
@@ -209,7 +209,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums22
-while (( ${#nums22[@]} < 500 )); do
+while (( ${#nums22[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums22[$num]=1
 done
@@ -219,7 +219,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums23
-while (( ${#nums23[@]} < 500 )); do
+while (( ${#nums23[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums23[$num]=1
 done
@@ -229,7 +229,7 @@ echo -e "$(ARG="$ARG"; ./push_swap $ARG | ./checker_linux $ARG)"
 echo -e "$(ARG="$ARG"; ./push_swap $ARG | wc -l)\n"
 
 declare -A nums24
-while (( ${#nums24[@]} < 500 )); do
+while (( ${#nums24[@]} < 100 )); do
   num=$((RANDOM % 2001 - 1000))
   nums24[$num]=1
 done

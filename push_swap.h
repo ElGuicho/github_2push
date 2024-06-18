@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:52:34 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/18 18:07:12 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct push_list
 	int	steps_rrb;
 	int	steps_rrr;
 	int	limit_error;
+	int	has_space;
 }	t_swap_list;
 
 int			push_swap(int argc, char **argv);
@@ -61,7 +62,7 @@ void		pa(t_swap_list *nums);
 void		pb(t_swap_list *nums);
 
 //num_check
-int			arg_count(int argc, char **argv, int i);
+int			arg_count(int argc, char **argv, int i, int j);
 void		argtoint(t_swap_list *nums, int argc, char **argv, int i);
 int			in_order(t_swap_list *nums, int *n);
 long int	ft_atol(const char *str);
