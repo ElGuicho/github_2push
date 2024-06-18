@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:25:01 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/18 18:16:14 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/06/18 18:29:10 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int	digits_in_nb(char *arg_w_spc, int i, int arg_len)
 int	arg_space(t_swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 {
 	char	**nb;
-	
+
 	nb = ft_split(arg_w_spc, ' ');
 	if (nb == NULL)
 		nums->limit_error = -1;
