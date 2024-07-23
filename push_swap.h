@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:46:57 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/18 18:07:12 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/07/23 15:35:34 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int			arg_count(int argc, char **argv, int i, int j);
 void		argtoint(t_swap_list *nums, int argc, char **argv, int i);
 int			in_order(t_swap_list *nums, int *n);
 long int	ft_atol(const char *str);
+void		split_free(char **str);
 
 // arranging numbers
 void		move3(t_swap_list *nums, int *n);

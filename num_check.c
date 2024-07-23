@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:25:01 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/18 18:29:10 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/07/23 16:00:43 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,13 +97,14 @@ int	arg_space(t_swap_list *nums, char *arg_w_spc, int nargs_in_lst, int i)
 		if (ft_atol(nb[i]) < INT_MIN || ft_atol(nb[i]) > INT_MAX)
 		{
 			nums->limit_error = -1;
+			split_free(nb);
 			return (nargs_in_lst);
 		}
 		nums->column_a[nargs_in_lst++] = ft_atoi(nb[i]);
 		i++;
 	}
 	nums->has_space = 1;
-	free(nb);
+	split_free(nb);
 	return (nargs_in_lst);
 }
 
@@ -115,15 +116,15 @@ void	argtoint(t_swap_list *nums, int argc, char **argv, int i)
 	nargs_in_lst = 0;
 	while (i < argc)
 	{
+		nums->has_space = 0;
 		j = 0;
-		while (argv[i][j] != '\0')
+		while (argv[i][j++] != '\0')
 		{
 			if (argv[i][j] == ' ')
 			{
 				nargs_in_lst = arg_space(nums, argv[i], nargs_in_lst, 0) - 1;
 				break ;
 			}
-			j++;
 		}
 		if (nums->has_space == 0)
 		{

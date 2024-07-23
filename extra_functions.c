@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:44:31 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/06/13 18:48:29 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/07/23 15:39:39 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,17 @@ void	sort_nums(t_swap_list *nums, int *column_a)
 		j = 0;
 		i++;
 	}
+}
+
+void	split_free(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != NULL)
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
